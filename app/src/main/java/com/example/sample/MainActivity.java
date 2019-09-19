@@ -40,9 +40,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getImageData() {
+
         RequestBody user_id = RequestBody.create(MediaType.parse("plain/text"), "108");
         RequestBody offset = RequestBody.create(MediaType.parse("plain/text"), "0");
         RequestBody type = RequestBody.create(MediaType.parse("plain/text"), "popular");
+
         Utils.showProgressDialog(MainActivity.this);
 
         RestClient.commingImage(user_id, offset, type, new Callback<Image>() {
